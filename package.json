@@ -1,0 +1,44 @@
+{
+  "name": "@chalharu/renovate-config",
+  "version": "0.1.0",
+  "repository": "https://github.com/chalharu/renovate-config",
+  "author": "Mitsuharu Seki <mitsu1986@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "renovate-config-validator"
+  },
+  "renovate-config": {
+    "default": {
+      "extends": [
+        "config:base",
+        ":disableRateLimiting",
+        ":dependencyDashboard"
+      ],
+      "timezone": "Asia/Tokyo",
+      "assignees": [
+        "chalharu"
+      ],
+      "configMigration": true,
+      "configWarningReuseIssue": false,
+      "ignoreTests": true,
+      "labels": [
+        "renovate"
+      ],
+      "packageRules": [
+        {
+          "matchPackageNames": [
+            "renovatebot/github-action",
+            "actions/create-github-app-token"
+          ],
+          "automerge": true,
+          "labels": [
+            "github-action"
+          ]
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "renovate": "39.11.4"
+  }
+}
