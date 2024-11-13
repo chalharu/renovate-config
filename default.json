@@ -11,7 +11,6 @@
   ],
   "configMigration": true,
   "configWarningReuseIssue": false,
-  "ignoreTests": true,
   "labels": [
     "renovate"
   ],
@@ -21,6 +20,7 @@
         "renovatebot/github-action",
         "actions/create-github-app-token"
       ],
+      "ignoreTests": true,
       "automerge": true,
       "labels": [
         "github-action"
@@ -30,7 +30,31 @@
       "matchManagers": [
         "cargo"
       ],
-      "rangeStrategy": "bump"
+      "rangeStrategy": "bump",
+      "labels": [
+        "cargo"
+      ]
+    },
+    {
+      "matchManagers": [
+        "cargo"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
+    },
+    {
+      "matchManagers": [
+        "cargo"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "matchCurrentVersion": "/^0/",
+      "automerge": true
     }
   ],
   "rebaseWhen": "behind-base-branch"
