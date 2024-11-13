@@ -17,4 +17,4 @@ on:
 
 jobs:
   build:
-    uses: ./.github/workflows/ci-config-base.yaml
+    uses: chalharu/workflows/.github/workflows/renovate-ci.yaml@main
