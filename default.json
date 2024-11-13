@@ -27,8 +27,10 @@
       ]
     },
     {
-      "matchManagers": ["cargo"],
-      "rangeStrategy": ["bump"]
+      "matchManagers": [
+        "cargo"
+      ],
+      "rangeStrategy": "bump"
     }
   ],
   "rebaseWhen": "behind-base-branch"
