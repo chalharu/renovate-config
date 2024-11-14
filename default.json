@@ -55,6 +55,15 @@
       ],
       "matchCurrentVersion": "/^0/",
       "automerge": true
+    },
+    {
+      "matchDepTypes": [
+        "action"
+      ],
+      "matchPackageNames": [
+        "!actions/{/,}**"
+      ],
+      "pinDigests": true
     }
   ],
   "rebaseWhen": "behind-base-branch"
