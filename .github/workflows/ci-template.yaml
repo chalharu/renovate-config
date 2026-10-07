@@ -8,6 +8,6 @@ on:
 
 jobs:
   build:
-    uses: chalharu/workflows/.github/workflows/renovate-ci.yaml@8639bd74d9c392e161e67d10d32bb447b8d35095 # main
+    uses: chalharu/workflows/.github/workflows/renovate-ci.yaml@d13a4dd1cbae44bee9539e5b044f9625e8544b2b # main
     with:
       target: default.json
